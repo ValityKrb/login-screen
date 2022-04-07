@@ -9,7 +9,7 @@
                 <br/>
                 <label for="Password">Password:</label>
                 <br/>
-                <input n="Password" type="text" maxlength="60" style="width:100%;max-width:250px;" />
+                <input n="Password" type="Password" maxlength="60" style="width:100%;max-width:250px;" />
         <td/>
     </table>
     <input type="submit" name="submit"
