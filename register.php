@@ -7,7 +7,8 @@
 <body>
 <?php
 if(isset($_POST["submit"])){
-    require("mysql.php");
+    include("mysql.php");
+    global $mysql;
     $stmt = $mysql->prepare("SELECT * FROM accounts WHERE USERNAME = :user");
     $stmt->bindParam(":user", $_POST["username"]);
     $stmt->execute();
