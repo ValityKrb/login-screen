@@ -14,14 +14,14 @@ if(isset($_POST["submit"])){
     $stmt->execute();
     $count = $stmt->rowCount();
     if($count == 0){
-        $stmt = $mysql->prepare("SELECT * FROM accounts WHERE EMAIL = :email");
+        $stmt = $mysql->prepare("SELECT * FROM accounts WHERE email = :email");
         $stmt->bindParam(":email", $_POST["email"]);
         $stmt->execute();
         $count = $stmt->rowCount();
         if($count == 0){
             if($_POST["pw"] == $_POST["pw2"]){
                 //User anlegen
-                $stmt = $mysql->prepare("INSERT INTO accounts (USERNAME, PASSWORD, EMAIL, TOKEN) VALUES (:user, :pw, :email, null)");
+                $stmt = $mysql->prepare("INSERT INTO accounts (USERNAME, PASSWORD, email, TOKEN) VALUES (:user, :pw, :email, null)");
                 $stmt->bindParam(":user", $_POST["username"]);
                 $hash = password_hash($_POST["pw"], PASSWORD_BCRYPT);
                 $stmt->bindParam(":pw", $hash);
@@ -41,9 +41,15 @@ if(isset($_POST["submit"])){
 ?>
 <h1>Account erstellen</h1>
 <form action="register.php" method="post">
-    <input type="text" name="username" placeholder="Username" required><br>
-    <input type="password" name="pw" placeholder="Passwort" required><br>
-    <input type="password" name="pw2" placeholder="Passwort wiederholen" required><br>
+    <label>
+        <input type="text" name="username" placeholder="Username" required>
+    </label><br>
+    <label>
+        <input type="password" name="pw" placeholder="Passwort" required>
+    </label><br>
+    <label>
+        <input type="password" name="pw2" placeholder="Passwort wiederholen" required>
+    </label><br>
     <button type="submit" name="submit">Erstellen</button>
 </form>
 <br>

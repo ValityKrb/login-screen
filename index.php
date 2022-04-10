@@ -36,6 +36,8 @@
         <label>
             <input type="password" name="password" required>
         </label>
+        <br>
+            <input type="password" name="password" required>
         <button type="submit" name="submit">Logge dich ein</button>
     </form>
     <br>
