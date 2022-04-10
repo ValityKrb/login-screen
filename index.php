@@ -28,9 +28,13 @@
     ?>
     <h1>Melde dich an</h1>
     <form action="index.php" method="post">
-        <input type="text" name="username" required>
+        <label>
+            <input type="text" name="username" required>
+        </label>
         <br>
-        <input type="password" name="password" required>
+        <label>
+            <input type="password" name="password" required>
+        </label>
         <button type="submit" name="submit">Logge dich ein</button>
     </form>
     <br>
