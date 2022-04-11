@@ -27,6 +27,7 @@ if(isset($_POST["submit"])){
                 $stmt->bindParam(":email", $_POST["email"]);
                 $stmt->execute();
                 echo "Dein Account wurde angelegt";
+                header("Location: index.php");
             } else {
                 echo "Die Passwörter stimmen nicht überein";
             }
