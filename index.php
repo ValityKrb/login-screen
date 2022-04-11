@@ -18,7 +18,7 @@
             if(password_verify($_POST["pw"], $row["PASSWORD"])){
                 session_start();
                 $_SESSION["username"] = $row["USERNAME"];
-                header("Location: geheim.php");
+                header("Location: login.php");
             } else {
                 echo "Der Login ist fehlgeschlagen";
             }
@@ -37,7 +37,9 @@
             <input type="password" name="password" required>
         </label>
         <br>
+        <label>
             <input type="password" name="password" required>
+        </label>
         <button type="submit" name="submit">Logge dich ein</button>
     </form>
     <br>
