@@ -13,3 +13,8 @@ $username = $_SESSION["username"];
 
 echo "Willkommen $username";
 ?>
+
+<br>
+<br>
+<br>
+<button type="submit" name="submit">Ausloggen</button>
