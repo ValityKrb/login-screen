@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Erfolgreich eingeloggt</title>
 </head>
-<h1>Du hast dich erfolgreich eingelogt</h1>
+<h1>Du hast dich erfolgreich eingeloggt</h1>
 <?php
 include ("mysql.php");
 global $mysql;
